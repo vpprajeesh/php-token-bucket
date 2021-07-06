@@ -13,13 +13,13 @@ $ composer require api/token-bucket
 Integration
 -----------
 
-- [PSR-15 Rate Limiter Middleware](https://github.com/api/psr-rate-limiter)
 
-You can also build your own, let's take 500 requests per hours as example:
+
+let's take 5000 requests per hours as example:
 
 ```php
 // create a token bucket manager
-$capacity = 500; // each bucket capacity, in other words, maximum number of tokens.
+$capacity = 5000; // each bucket capacity, in other words, maximum number of tokens.
 $rate = 0.72; // 3600/5200, how offen the token will be added to bucket
 $logger = new \Psr\Log\NullLogger(); // PSR logger
 $ttl = 3600; // time to live.
